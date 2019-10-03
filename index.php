@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Cell Block Manager</title>
+  <title>Site Outage Excel Exporter</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
@@ -58,18 +58,13 @@
           <li class="breadcrumb-item active">Overview</li>
         </ol>
 
-        <!-- Export  -->
-        <!-- <div class="card col-xl-12 col-sm-12 mb-3">
+<!-- Export  -->
+<div class="card col-xl-12 col-sm-12 mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
             Date Range Excel Exporter</div>
           <div class="card-body">
-            <div class="card col-xl-12 col-sm-12 mb-3">
-              <div class="card-header">
-                <i class="fas fa-file"></i>
-                Export Cell Details Form</div>
-              <div class="card-body">
-                <form method="post" action="export.php">
+          <form method="post" action="export.php">
                   <div class="form-group row">
                     <label class="col-sm-2 col-form-label" style="margin-right: -94px;">Date Range
                       :</label>
@@ -85,11 +80,8 @@
                     </div>
                   </div>
                 </form>
-              </div>
-
-            </div>
           </div>
-        </div> -->
+        </div>
 
         <!-- Export  -->
         <div class="card col-xl-12 col-sm-12 mb-3">
