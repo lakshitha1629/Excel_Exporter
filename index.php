@@ -58,28 +58,27 @@
           <li class="breadcrumb-item active">Overview</li>
         </ol>
 
-<!-- Export  -->
-<div class="card col-xl-12 col-sm-12 mb-3">
+        <!-- Export  -->
+        <div class="card col-xl-12 col-sm-12 mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
             Date Range Excel Exporter</div>
           <div class="card-body">
-          <form method="post" action="export.php">
-                  <div class="form-group row">
-                    <label class="col-sm-2 col-form-label" style="margin-right: -94px;">Date Range
-                      :</label>
-                    <div class="col-sm-3">
-                      <input class="form-control" type="date" name="date1" maxlength="10" required>
-                    </div>
-                    <label class="col-sm-0 col-form-label"> to </label>
-                    <div class="col-sm-3">
-                      <input class="form-control" type="date" name="date2" maxlength="10" required>
-                    </div>
-                    <div class="col-sm-2">
-                      <input class="btn btn-success" type=submit value="Export" name="export">
-                    </div>
-                  </div>
-                </form>
+            <form method="post" action="export.php">
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" style="margin-right: -94px;">Date Range:</label>
+                <div class="col-sm-3">
+                  <input class="form-control" type="date" name="date1" maxlength="10" required>
+                </div>
+                <label class="col-sm-0 col-form-label"> to </label>
+                <div class="col-sm-3">
+                  <input class="form-control" type="date" name="date2" maxlength="10" required>
+                </div>
+                <div class="col-sm-2">
+                  <input class="btn btn-success" type=submit value="Export" name="export">
+                </div>
+              </div>
+            </form>
           </div>
         </div>
 
@@ -87,13 +86,30 @@
         <div class="card col-xl-12 col-sm-12 mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Full Site Outage Excel Exporter</div>
+            Full Site Outage Excel Exporter (Unclear Sites)</div>
+          <div class="card-body">
+            <form method="post" action="export_all_clear.php">
+              <div class="form-row">
+                <label class="col-sm-2 col-form-label">Export Full File Type:</label>
+                <div class="col-sm-2">
+                  <input class="btn btn-success" type="submit" name="export1" value="Export">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Export  -->
+        <div class="card col-xl-12 col-sm-12 mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Full Site Outage Excel Exporter (All Records)</div>
           <div class="card-body">
             <form method="post" action="export_all.php">
               <div class="form-row">
-                <div class="col-md-8 mb-3">
-                  <label>Export Full File : </label>
-                  <input class="btn btn-success" type="submit" name="export1" value="Export">
+                <label class="col-sm-2 col-form-label">Export Full File Type:</label>
+                <div class="col-sm-2">
+                  <input class="btn btn-success" type="submit" name="export2" value="Export">
                 </div>
               </div>
             </form>
@@ -128,7 +144,6 @@
               <th>Site name</th> 
               <th>Region</th>  
               <th>Sub Region</th>
-              <th>Main Region</th>
               <th>Fault Occurred Time</th>
               <th>Fault Report Time</th>
               <th>Reported By</th>    
@@ -149,7 +164,6 @@
                   <th>Site name</th> 
                   <th>Region</th> 
                   <th>Sub Region</th>
-                  <th>Main Region</th>
                   <th>Fault Occurred Time</th>
                   <th>Fault Report Time</th>
                   <th>Reported By</th>    
@@ -174,7 +188,6 @@
                   $field5name = $row["site_name"];
                   $field6name = $row["region"];
                   $field7name = $row["subregion"];
-                  $field8name = $row["mainregion"];
                   $field9name = $row["fault_occurred_time"];
                   $field10name = $row["fault_report_time"];
                   $field11name = $row["reported_by"];
@@ -192,8 +205,7 @@
                                 <td>" . $field4name . "</td> 
                                 <td>" . $field5name . "</td> 
                                 <td>" . $field6name . "</td>
-                                <td>" . $field7name . "</td> 
-                                <td>" . $field8name . "</td> 
+                                <td>" . $field7name . "</td>  
                                 <td>" . $field9name . "</td> 
                                 <td>" . $field10name . "</td> 
                                 <td>" . $field11name . "</td> 

@@ -1,10 +1,11 @@
 <?php 
   require_once ('connect.php');
   $output = "";
-
-if(isset($_POST['export1'])){ 
-   $query = "SELECT * FROM `downsites_2019_10_01` WHERE `user_clear_date` IS NULL";
-   $result = mysqli_query($con, $query);
+  
+if(isset($_POST['export2'])){ 
+    $query = "SELECT * FROM `downsites_2019_10_01`";
+  
+    $result = mysqli_query($con, $query);
    if(mysqli_num_rows($result) > 0)
    {
      // idDownSites`, `wender`, `type`, `date`, `site_name`, `region`, `subregion`, `mainregion`, 
